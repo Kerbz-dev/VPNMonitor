@@ -28,6 +28,8 @@ DB returns no user -> API check is made to verify vpn/no vpn -> if no vpn passed
 
 7: run startvpnmonitor (./startvpnmonitor) 
 
+8: If you run a daily restart script for the server, make sure you add ./startvpnmonitor after your server restart command. Otherwise log will be truncated on server restart.
+
 ---------- Example startup script -----------
 
 restart script that logs console output to 'log.txt' -- just start this with a screen command 
