@@ -2,6 +2,8 @@ VPN Monitor - developed by devon
 
 Converting to nodeJS soon.
 
+Feel free to use, edit it, re-write it in any way you may find helpful for the community.
+
 Version 0.9, 05/2-21
 
 ----------- Installation ----------
