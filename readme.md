@@ -6,7 +6,7 @@ Feel free to use, edit it, re-write it in any way you may find helpful for the c
 
 Version 0.9, 05/2-21
 
-Player connects -> program intercepts -> call to DB is made -> DB returns user | returns to listen for connections
+Player connects -> program intercepts -> call to DB is made -> DB returns user | breaks to listen for connections
 
 DB returns no user -> API check is made to verify vpn/no vpn -> if no vpn passed to DB as verified IP 
 
