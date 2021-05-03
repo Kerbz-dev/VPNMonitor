@@ -12,7 +12,7 @@ echo "monitoring ..."
 #allows you to send rcon commands to server, replace <PASSWORD> with the rcon password, status with the rconcommand, <SERVER_IP> and <SERVER_PORT>
 tail -fn0 "$filepath" | 
 while read line ; do
-        echo "$now connection request received: $line" | grep ":\sconnect"
+        echo "$new connection request received: $line" | grep ":\sconnect"
         if [ $? = 0 ]
         then
 		IFS=': '
