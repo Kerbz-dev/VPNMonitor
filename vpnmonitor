@@ -1,5 +1,5 @@
 #!/bin/bash
-filepath=/usr/local/games/jka4/log.txt #/path/to/file - enter path to log file usr/games/jka/log.txt fx
+filepath=/usr/local/games/jka/log.txt #/path/to/file - enter path to log file usr/games/jka/log.txt fx
 apikey=enterapikey #enter your apikey to iphub.info
 #databasepath=/path/to/db - if you want to use another DB -- check notes below
 now=$(date +"%T")
