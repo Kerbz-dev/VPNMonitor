@@ -1,6 +1,6 @@
 #!/bin/bash
 filepath=/usr/local/games/jka4/log.txt #/path/to/file - enter path to log file usr/games/jka/log.txt fx
-apikey=MTI5NDQ6M0JtWk1RbTBpUXYwbTJuUjQ5aFVVZktKamRCTk9oWkM= #enter your apikey to iphub.info
+apikey=enterapikey #enter your apikey to iphub.info
 #databasepath=/path/to/db - if you want to use another DB -- check notes below
 now=$(date +"%T")
 echo "VPN monitor - developed by devon"
