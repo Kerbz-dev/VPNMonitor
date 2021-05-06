@@ -14,7 +14,7 @@ echo "monitoring ..."
 tail -fn0 "$filepath" | 
 while read line ; do
         echo "$new connection request received: $line" | grep -E "$connectFormat"
-	if [ $? = 0 ] #todo: add some sort of filtering so say commands won't be executed if they match connectFormat
+	if [ $? = 0 ] #todo: add some sort of check so say commands won't be executed if they match connectFormat
         then
 		IFS=': '
 		read -a strarr <<< "$line"
