@@ -25,14 +25,17 @@ while read line ; do
 			response=$(curl -s http://v2.api.iphub.info/ip/"${strarr[2]}" -H "X-Key: $apikey")
 			echo "$now ${strarr[2]} : $response"
 				if [[ "$response" =~ '"block":0' ]];
-					then
+				then
 					echo "$now ${strarr[2]} : no VPN detected"
 					sqlite3 jkadb.sqlite "INSERT INTO iplist(ip, vpn) VALUES ('${strarr[2]}', 0)" #replace jkadb.sqlite with $databasepath + quotationmarks if you want to use another db
 					echo "$now ${strarr[2]} : added & allowed"
-				else	
+				elif [[ "$response" =~ '"block":1' ]]
+				then 
 					echo "$now ${strarr[2]} : VPN detected"
 					iptables -w -I INPUT -s "${strarr[2]}" -j DROP
 					echo "$now ${strarr[2]} : has been blacklisted."
+				else	
+					echo "invalid input, doing nothing"
 				fi
    			fi
   	fi
