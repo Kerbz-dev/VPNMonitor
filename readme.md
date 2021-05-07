@@ -1,5 +1,7 @@
 VPN Monitor - developed by devon
 
+//Big thanks to oreo for his great and getting me started on the project :)
+
 Converting to nodeJS soon.
 
 Feel free to use, edit it, re-write it in any way you may find helpful for the community.
@@ -53,4 +55,4 @@ done
 
 echo "Server exited peacefully"
 
-#Big thanks to oreo for his great and getting me started on the project :)
+
