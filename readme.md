@@ -1,6 +1,6 @@
 VPN Monitor - developed by devon
 
-//Big thanks to oreo for his great and getting me started on the project :)
+//Big thanks to oreo for his great help and getting me started on the project :)
 
 Converting to nodeJS soon.
 
