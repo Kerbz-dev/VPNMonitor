@@ -30,7 +30,7 @@ while read line ; do
 					echo "`$currentTime` ${strarr[2]} : no VPN detected"
 					sqlite3 jkadb.sqlite "INSERT INTO iplist(ip, vpn) VALUES ('${strarr[2]}', 0)" #replace jkadb.sqlite with $databasepath + quotationmarks if you want to use another db
 					echo "`$currentTime` ${strarr[2]} : added & allowed"
-				elif [[ "$response" =~ '"block":1' ]]
+				elif [[ "$response" =~ '"block":1' || "$response" =~ '"block":2' ]]
 				then 
 					echo "`$currentTime` ${strarr[2]} : VPN detected"
 					sudo iptables -w -I INPUT -s "${strarr[2]}" -j DROP
