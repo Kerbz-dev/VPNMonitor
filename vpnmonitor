@@ -33,7 +33,7 @@ while read line ; do
 				elif [[ "$response" =~ '"block":1' ]]
 				then 
 					echo "$timestamp ${strarr[2]} : VPN detected"
-					iptables -w -I INPUT -s "${strarr[2]}" -j DROP
+					sudo iptables -w -I INPUT -s "${strarr[2]}" -j DROP
 					echo "$timestamp ${strarr[2]} : has been blacklisted."
 				else	
 					echo "invalid input, doing nothing"
