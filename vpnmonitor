@@ -20,10 +20,10 @@ while read line ; do
                 result=$(sqlite3 jka2database.sqlite "SELECT ip from iplist where ip='${strarr[2]}'") #replace jkadb.sqlite with $databasepath + quotationmarks if you want to use another db
                         if [ -z "$result" ]
                         then
-                        echo "`$currentTime` ${strarr[2]} : was not found in database"
-                        echo "`$currentTime` ${strarr[2]} : checking for VPN"
-                        response=$(curl -s http://v2.api.iphub.info/ip/"${strarr[2]}" -H "X-Key: $apikey")
-                        echo "`$currentTime` ${strarr[2]} : $response"
+                                echo "`$currentTime` ${strarr[2]} : was not found in database"
+                                echo "`$currentTime` ${strarr[2]} : checking for VPN"
+                                response=$(curl -s http://v2.api.iphub.info/ip/"${strarr[2]}" -H "X-Key: $apikey")
+                                echo "`$currentTime` ${strarr[2]} : $response"
                                 if [[ "$response" =~ '"block":0' ]];
                                 then
                                         echo "`$currentTime` ${strarr[2]} : no VPN detected"
@@ -36,7 +36,6 @@ while read line ; do
                                         echo "`$currentTime` ${strarr[2]} : has been blacklisted."
                                 else
                                         echo "invalid IP detected : ${strarr[2]} ??? issuing ban"
-                                        echo "`$currentTime` ${strarr[2]} : VPN detected"
                                         sudo iptables -w -I INPUT -s "${strarr[2]}" -j DROP
                                         echo "`$currentTime` ${strarr[2]} : has been blacklisted."
 
