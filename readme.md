@@ -2,7 +2,7 @@ VPN Monitor - developed by devon
 
 //Big thanks to oreo for his great help and getting me started on the project :)
 
-Mhoker converting to nodeJS soon
+nodeJS conversion might happen at some point
 
 Feel free to use, edit it, re-write it in any way you may find helpful for the community.
 
